@@ -1,0 +1,55 @@
+.PopConfirm-black-panel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+}
+
+.PopConfirm {
+  position: absolute;
+  top: 30%;
+  background: var(--white-color);
+  box-shadow: 0 2px 5px var(--grey-color);
+  border-radius: 3px;
+  animation: show-pop-confirm .25s ease both;
+}
+
+@keyframes show-pop-confirm {
+  from { opacity: 0; transform: scale(0) }
+  to { opacity: 1; transform: scale(1) }
+}
+
+.PopConfirm header {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 14px;
+  padding: 5px;
+  border-bottom: 1px solid var(--medium-grey-color);
+}
+
+.PopConfirm header > svg {
+  color: var(--warning-color);
+  margin-right: 10px;
+}
+
+.PopConfirm footer {
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.PopConfirm footer > input:last-child {
+  margin-left: 5px;
+}
+
+.PopConfirm-button {
+  cursor: pointer;
+}

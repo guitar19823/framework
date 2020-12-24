@@ -1,0 +1,59 @@
+.InputFile-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 145px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--white-color);
+  margin: 0;
+}
+
+.InputFile {
+  display: none;
+}
+
+.InputFile-label svg {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.InputFile-label span {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.InputFile-label.grey {
+  background: var(--grey-color);
+}
+
+.InputFile-label.grey:hover {
+  box-shadow: 0 0 2px var(--grey-color);
+}
+
+.InputFile-label.red {
+  background: var(--danger-color);
+}
+
+.InputFile-label.red:hover {
+  box-shadow: 0 0 2px var(--danger-color);
+}
+
+.InputFile-label.green {
+  background: var(--green-color);
+}
+
+.InputFile-label.green:hover {
+  box-shadow: 0 0 2px var(--green-color);
+}
+
+.InputFile-label.blue {
+  background: var(--blue-color);
+}
+
+.InputFile-label.blue:hover {
+  box-shadow: 0 0 2px var(--blue-color);
+}

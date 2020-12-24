@@ -1,0 +1,13 @@
+.Avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.Avatar > img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}

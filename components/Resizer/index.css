@@ -1,0 +1,25 @@
+.Resizer-grey,
+.Resizer-white {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 5px;
+}
+
+.Resizer-grey {
+  color: var(--text-color);
+}
+
+.Resizer-white {
+  color: var(--white-color);
+}
+
+.size-persent {
+  width: 45px;
+  text-align: center;
+}
+
+.Resizer-with-component {
+  width: 100%;
+  transition: all .2s ease;
+}

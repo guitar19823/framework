@@ -1,0 +1,133 @@
+.NavigationWindow {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+}
+
+.NavigationWindow .NavigationWindow-list {
+  display: none;
+}
+
+.NavigationWindow:hover .NavigationWindow-list {
+  display: block;
+  animation: NavigationWindow .25s ease both;
+  transform-origin: left bottom;
+}
+
+@keyframes NavigationWindow {
+  0% {transform: rotateX(90deg)}
+  100% {transform: rotateX(0deg)}
+}
+
+.NavigationWindow-list ul {
+  list-style: none;
+}
+
+.NavigationWindow:hover .NavigationWindow-list ul {
+  animation: NavigationWindow-opacity .25s .25s ease both;
+}
+
+@keyframes NavigationWindow-opacity {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.NavigationWindow-list ul li {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.NavigationWindow.left .NavigationWindow-list,
+.NavigationWindow.left-top .NavigationWindow-list,
+.NavigationWindow.right .NavigationWindow-list,
+.NavigationWindow.right-top .NavigationWindow-list {
+  position: absolute;
+  z-index: 100;
+  box-shadow: 0 2px 5px var(--text-color);
+  background-color: var(--grey-color);
+  border-radius: 1px;
+  padding: 5px;
+  min-width: 40px;
+}
+
+.NavigationWindow.left .NavigationWindow-list {
+  top: -5px;
+  left: calc(100% + 10px);
+}
+
+.NavigationWindow.left-top .NavigationWindow-list {
+  bottom: -5px;
+  left: calc(100% + 10px);
+}
+
+.NavigationWindow.left .NavigationWindow-list::before,
+.NavigationWindow.left-top .NavigationWindow-list::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -15px;
+  height: 30px;
+  width: 15px;
+}
+
+.NavigationWindow.left .NavigationWindow-list::after,
+.NavigationWindow.left-top .NavigationWindow-list::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -10px;
+  height: 50px;
+  width: 10px;
+}
+
+.NavigationWindow.left .NavigationWindow-list::before,
+.NavigationWindow.left .NavigationWindow-list::after {
+  top: 0;
+}
+
+.NavigationWindow.left-top .NavigationWindow-list::before,
+.NavigationWindow.left-top .NavigationWindow-list::after {
+  bottom: 0
+}
+
+.NavigationWindow.right .NavigationWindow-list {
+  top: -5px;
+  right: calc(100% + 10px);
+}
+
+.NavigationWindow.right-top .NavigationWindow-list {
+  bottom: -5px;
+  right: calc(100% + 10px);
+}
+
+.NavigationWindow.right .NavigationWindow-list::before,
+.NavigationWindow.right-top .NavigationWindow-list::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -15px;
+  height: 30px;
+  width: 15px;
+}
+
+.NavigationWindow.right .NavigationWindow-list::after,
+.NavigationWindow.right-top .NavigationWindow-list::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -10px;
+  height: 50px;
+  width: 10px;
+}
+
+.NavigationWindow.right .NavigationWindow-list::before,
+.NavigationWindow.right .NavigationWindow-list::after {
+  top: 0;
+}
+
+.NavigationWindow.right-top .NavigationWindow-list::before,
+.NavigationWindow.right-top .NavigationWindow-list::after {
+  bottom: 0
+}

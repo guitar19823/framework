@@ -1,0 +1,84 @@
+.Modal-blackpanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+}
+
+.Modal-button {
+  cursor: pointer;
+}
+
+.Modal {
+  position: absolute;
+  top: 20%;
+  background: var(--white-color);
+  border-radius: 3px;
+  padding: 10px 10px 0;
+  animation: show-modal .25s ease both;
+}
+
+@keyframes show-modal {
+  from { opacity: 0; transform: scale(0) }
+  to { opacity: 1; transform: scale(1) }
+}
+
+.Modal-header {
+  color: var(--text-color);
+  font-size: 18px;
+  padding: 0 5px 5px;
+  border-bottom: 1px solid var(--medium-grey-color);
+  position: relative;
+}
+
+.Modal-close {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.Modal-close::before,
+.Modal-close::after {
+  content: "";
+  display: block;
+  background: var(--text-color);
+  width: 18px;
+  height: 2px;
+  position: absolute;
+}
+
+.Modal-close::before {
+  transform: rotate(45deg);
+}
+
+.Modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.Modal-content {
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.Modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 5px 0 5px;
+  margin-bottom: 10px;
+  border-top: 1px solid var(--medium-grey-color);
+}
+
+.Modal-footer button {
+  margin-left: 10px;
+}

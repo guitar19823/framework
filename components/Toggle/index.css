@@ -1,0 +1,35 @@
+.Toggle {
+  width: 24px;
+  height: 14px;
+  border-radius: 7px;
+  padding: 1px;
+  border: 1px solid var(--passive-color);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: var(--light-grey-color);
+}
+
+.Toggle::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--passive-color);
+}
+
+.Toggle.checked {
+  justify-content: flex-end;
+  border: 1px solid var(--active-color);
+  background: var(--light-blue-color);
+}
+
+.Toggle.checked::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--active-color);
+}

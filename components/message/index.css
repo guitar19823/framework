@@ -1,0 +1,36 @@
+.Message {
+  position: fixed;
+  left: 50%;
+  z-index: 10000;
+  transform: translateX(-50%);
+  background: var(--white-color);
+  border-radius: 2px;
+  color: var(--text-color);
+  box-shadow: 0 2px 5px var(--grey-color);
+  padding: 5px 10px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  animation: show-message .25s ease both;
+}
+
+@keyframes show-message {
+  0% { top: -50px }
+  100% { top: 20px }
+}
+
+.Message svg {
+  margin-right: 10px;
+}
+
+.Message .success {
+  color: var(--success-color);
+}
+
+.Message .warning {
+  color: var(--warning-color);
+}
+
+.Message .error {
+  color: var(--danger-color);
+}

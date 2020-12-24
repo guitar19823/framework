@@ -1,0 +1,173 @@
+.Tooltip-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.Tooltip-wrapper a {
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
+}
+
+.Tooltip-top,
+.Tooltip-top-left,
+.Tooltip-top-right,
+.Tooltip-bottom,
+.Tooltip-bottom-left,
+.Tooltip-bottom-right,
+.Tooltip-left,
+.Tooltip-right {
+  position: absolute;
+  z-index: 1000;
+  height: 20px;
+  box-shadow: 0 2px 5px var(--grey-color);
+  background: var(--white-color);
+  border-radius: 2px;
+  color: var(--text-color);
+  font-size: 12px;
+  white-space: nowrap;
+  display: none;
+}
+
+.Tooltip-top {
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Tooltip-top-left {
+  bottom: -28px;
+  left: -5px;
+}
+
+.Tooltip-top-right {
+  bottom: -28px;
+  right: -5px;
+}
+
+.Tooltip-bottom {
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Tooltip-bottom-left {
+  top: -28px;
+  left: -5px;
+}
+
+.Tooltip-bottom-right {
+  top: -28px;
+  right: -5px;
+}
+
+.Tooltip-left {
+  top: 50%;
+  right: -7px;
+  transform: translateX(100%) translateY(-50%);
+}
+
+.Tooltip-right {
+  top: 50%;
+  left: -7px;
+  transform: translateX(-100%) translateY(-50%);
+}
+
+.Tooltip-wrapper:hover .Tooltip-top,
+.Tooltip-wrapper:hover .Tooltip-top-left,
+.Tooltip-wrapper:hover .Tooltip-top-right,
+.Tooltip-wrapper:hover .Tooltip-bottom,
+.Tooltip-wrapper:hover .Tooltip-bottom-left,
+.Tooltip-wrapper:hover .Tooltip-bottom-right,
+.Tooltip-wrapper:hover .Tooltip-left,
+.Tooltip-wrapper:hover .Tooltip-right {
+  display: block;
+  animation: opacity .25s ease both;
+}
+
+@keyframes opacity {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+.Tooltip-top::before,
+.Tooltip-top-left::before,
+.Tooltip-top-right::before,
+.Tooltip-bottom::before,
+.Tooltip-bottom-left::before,
+.Tooltip-bottom-right::before,
+.Tooltip-left::before,
+.Tooltip-right::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  background: var(--white-color);
+  box-shadow: 2px 2px 5px var(--grey-color);
+  position: absolute;
+  z-index: -1;
+}
+
+.Tooltip-top::before {
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Tooltip-top-left::before {
+  top: -2px;
+  left: 10px;
+  transform: rotate(45deg);
+}
+
+.Tooltip-top-right::before {
+  top: -2px;
+  right: 10px;
+  transform: rotate(45deg);
+}
+
+.Tooltip-bottom::before {
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Tooltip-bottom-left::before {
+  bottom: -2px;
+  left: 10px;
+  transform: rotate(45deg);
+}
+
+.Tooltip-bottom-right::before {
+  bottom: -2px;
+  right: 10px;
+  transform: rotate(45deg);
+}
+
+.Tooltip-left::before {
+  left: -2px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.Tooltip-right::before {
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.Tooltip-top > span,
+.Tooltip-top-left > span,
+.Tooltip-top-right > span,
+.Tooltip-bottom > span,
+.Tooltip-bottom-left > span,
+.Tooltip-bottom-right > span,
+.Tooltip-left > span,
+.Tooltip-right > span {
+  display: block;
+  padding: 3px 5px;
+  background-color: var(--white-color);
+  border-radius: inherit;
+}

@@ -1,0 +1,61 @@
+.Sidebar {
+  background: var(--white-color);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.Sidebar-wrapped-component-left,
+.Sidebar-wrapped-component-right {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: width .25s ease;
+}
+
+.show-sidebar .Sidebar-wrapped-component-left,
+.show-sidebar .Sidebar-wrapped-component-right {
+  width: 77%;
+}
+
+.Sidebar-wrapped-component-left {
+  right: 0;
+}
+
+.Sidebar-wrapped-component-right {
+  left: 0;
+}
+
+.Sidebar-left,
+.Sidebar-right {
+  position: absolute;
+  width: 23%;
+  height: 100%;
+  transition: transform .25s ease;
+}
+
+.Sidebar-left {
+  border-right: 1px solid var(--medium-grey-color);
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.Sidebar-left:hover {
+  box-shadow: 1px 0 2px -1px var(--grey-color);
+}
+
+.Sidebar-right {
+  border-left: 1px solid var(--medium-grey-color);
+  right: 0;
+  transform: translateX(100%);
+}
+
+.Sidebar-right:hover {
+  box-shadow: -1px 0 2px -1px var(--grey-color);
+}
+
+.show-sidebar .Sidebar-left,
+.show-sidebar .Sidebar-right {
+  transform: translateX(0);
+}
